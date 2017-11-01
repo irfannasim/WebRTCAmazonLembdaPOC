@@ -1,0 +1,20 @@
+<div class="app-content-body">
+
+        <div class="container m-t-2x">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h1>VMME Taking Snapshot POC</h1>
+                <hr />
+                <webcam-component></webcam-component>
+                <button value="capture" (click)="capture()" type="button" id="btn-capture"
+                        class="btn btn-lg btn-primary"> Capture
+                </button>
+
+                <button value="capture" (click)="uploadToServer()" type="button" id="btn-upload"
+                        class="btn btn-lg btn-primary"> Upload to Server
+                </button>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <canvas id="myCanvas"></canvas>
+            </div>
+        </div>
+</div>

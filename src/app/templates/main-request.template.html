@@ -1,0 +1,50 @@
+<div class="app-content-body">
+    <form id="loginform" class="form-horizontal" #form="ngForm">
+        <div class="container m-t-2x">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <!--<div class="hr">-->
+                    <!--<div class="input-group-btn select" id="select1">-->
+                        <!--<button type="button" class="btn btn-default dropdown-toggle"-->
+                                <!--data-toggle="dropdown" aria-expanded="false">-->
+                            <!--<span class="selected">One</span>-->
+                            <!--<span class="caret"></span>-->
+                        <!--</button>-->
+                        <!--<ul class="dropdown-menu option" role="menu">-->
+                            <!--<li id="1"><a href="#">One</a></li>-->
+                            <!--<li id="2"><a href="#">Two</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <h4>Request</h4>
+                <div class="hr">
+                    <textarea class="form-control" rows="16" (keyup.enter)="doRequest(form)" readonly
+                              [(ngModel)]="requestJson" name="requestjson" #requestjson="ngModel">
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <!--<div class="hr">-->
+                    <!--<div class="input-group-btn select" id="select1">-->
+                        <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="selected">One</span> <span class="caret"></span></button>-->
+                        <!--<ul class="dropdown-menu option" role="menu">-->
+                            <!--<li id="1"><a href="#">One</a></li>-->
+                            <!--<li id="2"><a href="#">Two</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <h4>Response</h4>
+                <div class="hr">
+                     <textarea class="form-control" rows="16" [(ngModel)]="responseJson"
+                               name="responsejson" #responsejson="ngModel" readonly>
+                    </textarea>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 m-t-2x text-center">
+                <button (click)="doRequest(form)" type="button" id="btn-login"
+                        class="btn btn-lg btn-primary">Invoke
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
